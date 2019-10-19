@@ -9,3 +9,18 @@ class ClienteAdmin(admin.ModelAdmin):
     list_display = ('id', 'nome', 'telefone', 'email')
 
 admin.site.register(Cliente, ClienteAdmin)
+
+
+class ProdutosAdmin(admin.ModelAdmin):
+    list_filter = ('tipo_Produto', 'marca_produto', 'tamanho',)
+
+    list_display = ('marca_produto',
+                    'marca_modelo',
+                    'modelo_Produto',
+                    'unidades',
+                    'tamanho',
+                    'estoque',
+                    'valor_Entrada',
+                    'valor_Saida')
+
+admin.site.register(Produtos, ProdutosAdmin)
