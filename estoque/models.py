@@ -63,7 +63,8 @@ class Produtos(models.Model):
     valor_Saida = models.DecimalField(max_digits=5, decimal_places=2, null=False, blank=False)
 
     def __str__(self):
-        return f'{self.marca_produto} | {self.marca_modelo} | {self.modelo_Produto} | {self.unidades} unidades | R$ {self.valor_Saida}'
+        return '{} | {} | {} | {} unidades | R$ {}'.format(self.marca_produto, self.marca_modelo, self.modelo_Produto, self.unidades, self.valor_Saida)
+        #return f'{self.marca_produto} | {self.marca_modelo} | {self.modelo_Produto} | {self.unidades} unidades | R$ {self.valor_Saida}'
 
 
 class Pedido(models.Model):
