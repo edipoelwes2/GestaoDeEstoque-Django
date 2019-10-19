@@ -74,23 +74,22 @@ WSGI_APPLICATION = 'GestaoDeEstoque.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'teste2',
-#         'USER': 'root',
-#         'PASSWORD': 'Ed4354Po',
-#         'HOST': 'localhost',
-#         'PORT': '3306'
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'LittleOne',
+        'USER': 'edipoelwes',
+        'PASSWORD': '',
+        'HOST': 'edipoelwes.mysql.pythonanywhere-services.com',
+    }
+}
 
 
 # Password validation
