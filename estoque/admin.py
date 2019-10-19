@@ -24,3 +24,17 @@ class ProdutosAdmin(admin.ModelAdmin):
                     'valor_Saida')
 
 admin.site.register(Produtos, ProdutosAdmin)
+
+
+class PedidoAdmin(admin.ModelAdmin):
+    list_filter = ('pagamento', 'marca', 'data_pedido')
+
+    list_display = ('produtos',
+                    'data_pedido',
+                    'quantidade',
+                    'desconto',
+                    'total',
+                    'pagamento')
+
+
+admin.site.register(Pedido, PedidoAdmin)
