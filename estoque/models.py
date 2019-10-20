@@ -59,7 +59,7 @@ class Produtos(models.Model):
     unidades = models.PositiveIntegerField()
     tamanho = models.CharField(max_length=3, choices=TAMANHO_CHOICES, null=False, blank=False)
     estoque = models.PositiveIntegerField()
-    valor_Entrada = models.DecimalField(max_digits=5, decimal_places=2, null=False, blank=False)
+    valor_Entrada = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
     valor_Saida = models.DecimalField(max_digits=5, decimal_places=2, null=False, blank=False)
 
     def __str__(self):
