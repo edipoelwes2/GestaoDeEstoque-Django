@@ -84,10 +84,10 @@ WSGI_APPLICATION = 'GestaoDeEstoque.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'edipoelwes$LittleOne',
-        'USER': 'edipoelwes',
+        'NAME': 'littleonestore$LittleOne',
+        'USER': 'littleonestore',
         'PASSWORD': 'Ed4354Po',
-        'HOST': 'edipoelwes.mysql.pythonanywhere-services.com',
+        'HOST': 'littleonestore.mysql.pythonanywhere-services.com',
     }
 }
 
