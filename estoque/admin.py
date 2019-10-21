@@ -12,6 +12,7 @@ admin.site.register(Cliente, ClienteAdmin)
 
 
 class ProdutosAdmin(admin.ModelAdmin):
+    list_per_page = 10
     list_filter = ('tipo_Produto', 'marca_produto', 'tamanho',)
 
     list_display = ('marca_produto',
