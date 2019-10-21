@@ -28,6 +28,7 @@ admin.site.register(Produtos, ProdutosAdmin)
 
 
 class PedidoAdmin(admin.ModelAdmin):
+    list_per_page = 10
     list_filter = ('pagamento', 'marca', 'data_pedido')
 
     list_display = ('produtos',
