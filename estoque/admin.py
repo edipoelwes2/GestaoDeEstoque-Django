@@ -27,16 +27,25 @@ class ProdutosAdmin(admin.ModelAdmin):
 admin.site.register(Produtos, ProdutosAdmin)
 
 
+class PedidoItensInline(admin.TabularInline):
+    model = PedidoItens
+    extra = 0
+
+
 class PedidoAdmin(admin.ModelAdmin):
+    inlines = (PedidoItensInline, )
+    search_fields = ('data_pedido',)
+    list_filter = ('data_pedido', 'pago',)
+    list_display = ('id_pedido', 'cliente', 'data_pedido', 'pago',)
+    list_display_links = ('cliente',)
+    date_hierarchy = 'data_pedido'
     list_per_page = 10
-    list_filter = ('pagamento', 'marca', 'data_pedido')
-
-    list_display = ('produtos',
-                    'data_pedido',
-                    'quantidade',
-                    'desconto',
-                    'total',
-                    'pagamento')
-
 
 admin.site.register(Pedido, PedidoAdmin)
+
+class PedidoItensAdmin(admin.ModelAdmin):
+    list_display = ('pedido', 'produto', 'quantidade', 'desconto', 'subtotal',)
+    list_per_page = 10
+
+
+admin.site.register(PedidoItens, PedidoItensAdmin)
