@@ -50,6 +50,7 @@ class Produtos(models.Model):
         ("Scooby-Doo", "Scooby-Doo"),
         ("Hipopó", "Hipopó"),
         ("Johnson's", "Johnson's"),
+        ("Anjinhos", "Anjinhos"),
     )
 
     tipo_Produto = models.CharField(max_length=6, choices=PRODUTO_CHOICES, null=False, blank=False)
@@ -110,6 +111,7 @@ class PedidoItens(models.Model):
         ("Sco", "Scooby-Doo"),
         ("Hip", "Hipopó"),
         ("Joh", "Johnson's"),
+        ("Anj", "Anjinhos"),
     )
 
     pedido = models.ForeignKey(Pedido, on_delete=models.CASCADE)
