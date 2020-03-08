@@ -51,6 +51,7 @@ class Produtos(models.Model):
         ("Hipopó", "Hipopó"),
         ("Johnson's", "Johnson's"),
         ("Anjinhos", "Anjinhos"),
+        ("Little Baby", "Little Baby"),
     )
 
     tipo_Produto = models.CharField(max_length=6, choices=PRODUTO_CHOICES, null=False, blank=False)
