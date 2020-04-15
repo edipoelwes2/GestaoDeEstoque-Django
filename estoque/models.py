@@ -52,6 +52,7 @@ class Produtos(models.Model):
         ("Johnson's", "Johnson's"),
         ("Anjinhos", "Anjinhos"),
         ("Little Baby", "Little Baby"),
+        ("DinDin Baby", "DinDin Baby"),
     )
 
     tipo_Produto = models.CharField(max_length=6, choices=PRODUTO_CHOICES, null=False, blank=False)
@@ -113,6 +114,8 @@ class PedidoItens(models.Model):
         ("Hip", "Hipopó"),
         ("Joh", "Johnson's"),
         ("Anj", "Anjinhos"),
+        ("Lit", "Little Baby"),
+        ("DinDin Baby", "DinDin Baby"),
     )
 
     pedido = models.ForeignKey(Pedido, on_delete=models.CASCADE)
