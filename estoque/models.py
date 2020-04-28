@@ -115,7 +115,7 @@ class PedidoItens(models.Model):
         ("Joh", "Johnson's"),
         ("Anj", "Anjinhos"),
         ("Lit", "Little Baby"),
-        ("DinDin Baby", "DinDin Baby"),
+        ("Din", "DinDin Baby"),
     )
 
     pedido = models.ForeignKey(Pedido, on_delete=models.CASCADE)
